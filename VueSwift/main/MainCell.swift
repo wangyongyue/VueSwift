@@ -45,7 +45,7 @@ class MainCell: CTableCell {
         super.init(coder: aDecoder)
         
     }
-    override func setModel(_ amodel: Cat) {
+    override func setModel(_ amodel: VueData) {
         super.setModel(amodel)
         
         holder?.setModel(amodel)
@@ -55,7 +55,7 @@ class MainCell: CTableCell {
 }
 
 
-class MainModel: Cat {
+class MainModel: VueData {
 
 
     override init() {
@@ -71,7 +71,7 @@ class MainHolder: Holder {
     var clickVue = Vue()
     var tapVue = Vue()
     
-    override func setModel(_ amodel: Cat) {
+    override func setModel(_ amodel: VueData) {
         super.setModel(amodel)
         if amodel is MainModel{
             let a = amodel as! MainModel

@@ -22,7 +22,6 @@
 		18B5FC01229D060A00B6BDBB /* CField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC00229D060A00B6BDBB /* CField.swift */; };
 		18B5FC03229D061200B6BDBB /* CText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC02229D061200B6BDBB /* CText.swift */; };
 		18B5FC05229D061700B6BDBB /* CWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC04229D061700B6BDBB /* CWindow.swift */; };
-		18B5FC07229D062B00B6BDBB /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC06229D062B00B6BDBB /* Cat.swift */; };
 		18B5FC09229D063D00B6BDBB /* CTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC08229D063D00B6BDBB /* CTable.swift */; };
 		18B5FC0C229D064500B6BDBB /* CFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */; };
 		18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0B229D064500B6BDBB /* CCollection.swift */; };
@@ -37,6 +36,7 @@
 		18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1E229D0B3200B6BDBB /* MainVC.swift */; };
 		18B5FC23229D0B3900B6BDBB /* MainDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC21229D0B3800B6BDBB /* MainDetailsVC.swift */; };
 		18B5FC24229D0B3900B6BDBB /* MainDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC22229D0B3900B6BDBB /* MainDetailsCell.swift */; };
+		18C08344229E5BAC005DC71A /* VueData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C08343229E5BAC005DC71A /* VueData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,6 @@
 		18B5FC00229D060A00B6BDBB /* CField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CField.swift; sourceTree = "<group>"; };
 		18B5FC02229D061200B6BDBB /* CText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CText.swift; sourceTree = "<group>"; };
 		18B5FC04229D061700B6BDBB /* CWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWindow.swift; sourceTree = "<group>"; };
-		18B5FC06229D062B00B6BDBB /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		18B5FC08229D063D00B6BDBB /* CTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTable.swift; sourceTree = "<group>"; };
 		18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFlowLayout.swift; sourceTree = "<group>"; };
 		18B5FC0B229D064500B6BDBB /* CCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCollection.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		18B5FC1E229D0B3200B6BDBB /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		18B5FC21229D0B3800B6BDBB /* MainDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailsVC.swift; sourceTree = "<group>"; };
 		18B5FC22229D0B3900B6BDBB /* MainDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailsCell.swift; sourceTree = "<group>"; };
+		18C08343229E5BAC005DC71A /* VueData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				18B5FC16229D06D800B6BDBB /* CGesture.swift */,
-				18B5FC06229D062B00B6BDBB /* Cat.swift */,
+				18C08343229E5BAC005DC71A /* VueData.swift */,
 				18B5FBF6229D05E800B6BDBB /* CViewController.swift */,
 				18B5FBF8229D05F000B6BDBB /* CView.swift */,
 				18B5FBFA229D05F800B6BDBB /* CLabel.swift */,
@@ -394,13 +394,13 @@
 				18B5FBC4229D04A200B6BDBB /* ViewController.swift in Sources */,
 				18B5FC24229D0B3900B6BDBB /* MainDetailsCell.swift in Sources */,
 				18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */,
-				18B5FC07229D062B00B6BDBB /* Cat.swift in Sources */,
 				18B5FBF7229D05E800B6BDBB /* CViewController.swift in Sources */,
 				18B5FBC2229D04A200B6BDBB /* AppDelegate.swift in Sources */,
 				18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */,
 				18B5FC11229D067500B6BDBB /* CTableCell.swift in Sources */,
 				18B5FC15229D06C600B6BDBB /* Style.swift in Sources */,
 				18B5FBFF229D060400B6BDBB /* CImageView.swift in Sources */,
+				18C08344229E5BAC005DC71A /* VueData.swift in Sources */,
 				18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */,
 				18B5FC0F229D065600B6BDBB /* Holder.swift in Sources */,
 				18B5FC01229D060A00B6BDBB /* CField.swift in Sources */,

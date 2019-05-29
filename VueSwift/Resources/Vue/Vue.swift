@@ -65,8 +65,8 @@ class Vue: NSObject {
     }
     
     
-    var v_array:Array<Cat>?
-    func v_array(_ isPage:Bool,v:()->Array<Cat>?){
+    var v_array:Array<VueData>?
+    func v_array(_ isPage:Bool,v:()->Array<VueData>?){
         if isPage{
             if let arr = v(),let v_arr = v_array{
                 

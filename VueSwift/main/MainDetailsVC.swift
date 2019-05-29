@@ -67,7 +67,7 @@ class MainDetails:NSObject{
             vue?.v_array = nil
             return
         }
-        var array = Array<Cat>()
+        var array = Array<VueData>()
         for i in 1...6{
             
             let m = MainDetailsModel()
@@ -76,7 +76,7 @@ class MainDetails:NSObject{
         }
         
      
-        vue?.v_array(false, v: { () -> Array<Cat>? in
+        vue?.v_array(false, v: { () -> Array<VueData>? in
             
             return array
         })

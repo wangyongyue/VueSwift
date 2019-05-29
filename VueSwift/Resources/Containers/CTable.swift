@@ -11,7 +11,7 @@ import UIKit
 class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
 
     static var templates = Array<AnyClass>()
-    var array:Array<Cat>?
+    var array:Array<VueData>?
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         

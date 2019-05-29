@@ -11,7 +11,7 @@ import UIKit
 class Holder: NSObject {
     
     var v_selectVue = Vue()
-    var model:Cat?
-    func setModel(_ amodel:Cat){ self.model = amodel}
+    var model:VueData?
+    func setModel(_ amodel:VueData){ self.model = amodel}
 
 }

@@ -11,7 +11,7 @@ import UIKit
 class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDataSource{
 
     static var templates = Array<AnyClass>()
-    var array:Array<Cat>?
+    var array:Array<VueData>?
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         

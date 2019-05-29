@@ -19,5 +19,5 @@ class CTableCell: UITableViewCell {
         super.init(coder: aDecoder)
         
     }
-    func setModel(_ amodel:Cat){}
+    func setModel(_ amodel:VueData){}
 }

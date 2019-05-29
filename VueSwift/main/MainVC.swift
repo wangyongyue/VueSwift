@@ -56,11 +56,8 @@ class MainVC: CViewController {
                 print(obj)
             })
         }
- 
-        
         
     }
-    
 
 }
 class Main:NSObject{
@@ -68,7 +65,7 @@ class Main:NSObject{
     func loadData(vue:Vue?){
         
         
-        var array = Array<Cat>()
+        var array = Array<VueData>()
         for i in 1...3{
             
             let m = MainModel()
@@ -78,7 +75,7 @@ class Main:NSObject{
         }
         
 
-        vue?.v_array(true, v: { () -> Array<Cat>? in
+        vue?.v_array(true, v: { () -> Array<VueData>? in
             
             return array
         })

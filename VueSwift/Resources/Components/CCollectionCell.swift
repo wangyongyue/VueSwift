@@ -20,5 +20,5 @@ class CCollectionCell: UICollectionViewCell {
         
     }
     
-    func setModel(_ amodel:Cat){}
+    func setModel(_ amodel:VueData){}
 }

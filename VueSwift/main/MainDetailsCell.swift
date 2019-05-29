@@ -41,13 +41,13 @@ class MainDetailsCell: CTableCell {
         
         
     }
-    override func setModel(_ amodel: Cat) {
+    override func setModel(_ amodel: VueData) {
         super.setModel(amodel)
         holder?.setModel(amodel)
     }
     
 }
-class MainDetailsModel: Cat {
+class MainDetailsModel: VueData {
     override init() {
         super.init()
         v_palm = "MainDetailsCell"
@@ -59,7 +59,7 @@ class MainDetailsModel: Cat {
 class MainDetailsHolder: Holder {
     var modelVue = Vue()
     
-    override func setModel(_ amodel: Cat) {
+    override func setModel(_ amodel: VueData) {
         super.setModel(amodel)
         if amodel is MainDetailsModel{
             let a = amodel as! MainDetailsModel
