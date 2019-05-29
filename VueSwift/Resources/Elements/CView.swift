@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CView: UIView {
+open class CView: UIView {
 
     
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
             
             if let dic = vue.v_blind{
@@ -22,7 +22,7 @@ class CView: UIView {
         
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
             

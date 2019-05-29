@@ -8,19 +8,19 @@
 
 import UIKit
 
-typealias TapBlock = () -> ()
-class CGesture: UITapGestureRecognizer {
+public typealias TapBlock = () -> ()
+public class CGesture: UITapGestureRecognizer {
     
-    var tap:TapBlock?
+    public var tap:TapBlock?
    
-    convenience init(_ block:@escaping TapBlock){
+    public convenience init(_ block:@escaping TapBlock){
         self.init()
         tap = block
         self.addTarget(self, action: #selector(tapEvent))
     }
     
-    var eventVue:Vue?
-    convenience init(vue:Vue){
+    public var eventVue:Vue?
+    public convenience init(vue:Vue){
         self.init()
         eventVue = vue
         self.addTarget(self, action: #selector(tapEvent))

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Router: NSObject {
+public class Router: NSObject {
     
     
-    class func navigationController() -> UINavigationController?{
+    public class func navigationController() -> UINavigationController?{
         
         let vc = UIApplication.shared.keyWindow?.rootViewController
         
@@ -37,20 +37,20 @@ class Router: NSObject {
         return nil
     }
     
-    class func currentController() -> CViewController{
+    public class func currentController() -> CViewController{
         
         let controller = navigationController()
         
         return controller?.viewControllers.last as! CViewController
     }
-    class func params() -> [String:Any]?{
+    public class func params() -> [String:Any]?{
         
         if let dic = currentController().params{
             return dic
         }
         return nil
     }
-    class func push(_ viewController: UIViewController,_ params:[String:Any]?,_ block:popCallBack?){
+    public class func push(_ viewController: UIViewController,_ params:[String:Any]?,_ block:popCallBack?){
         
         if viewController is CViewController{
             let vc = viewController as! CViewController
@@ -60,7 +60,7 @@ class Router: NSObject {
         navigationController()?.pushViewController(viewController, animated: true)
     }
     
-    class func pop(_ objc:AnyObject?){
+    public class func pop(_ objc:AnyObject?){
         
         if objc != nil{
             
@@ -70,7 +70,7 @@ class Router: NSObject {
         navigationController()?.popViewController(animated: true)
     }
     
-    class func popViewController(_ toClass:AnyClass,_ objc:AnyObject?){
+    public class func popViewController(_ toClass:AnyClass,_ objc:AnyObject?){
         
         if let arr = navigationController()?.viewControllers{
             

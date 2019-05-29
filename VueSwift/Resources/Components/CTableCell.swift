@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CTableCell: UITableViewCell {
+open class CTableCell: UITableViewCell {
 
-    var holder:Holder?
+    open var holder:Holder?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
     }
-    func setModel(_ amodel:VueData){}
+    open func setModel(_ amodel:VueData){}
 }

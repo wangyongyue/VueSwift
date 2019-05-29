@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
+public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
 
-    static var templates = Array<AnyClass>()
-    var array:Array<VueData>?
+    public static var templates = Array<AnyClass>()
+    public var array:Array<VueData>?
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
@@ -25,16 +25,16 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         register(CTable.templates)
 
     }
-    override func numberOfRows(inSection section: Int) -> Int {
+    public override func numberOfRows(inSection section: Int) -> Int {
         return 1
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = array?.count{
             return count
         }
         return 0
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = array?[indexPath.row]
         if let m = model ,let palm = model?.v_palm {
             let cell = self.dequeueReusableCell(withIdentifier: palm, for: indexPath) as! CTableCell
@@ -53,7 +53,7 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         
     }
     
-    func register(_ templates:Array<AnyClass>){
+    public func register(_ templates:Array<AnyClass>){
         
         for value in templates{
             
@@ -70,7 +70,7 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
     
     
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
             
             if let dic = vue.v_blind{
@@ -80,7 +80,7 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
             
@@ -92,7 +92,7 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
     }
     
     //v-array
-    func v_array(vue:Vue){
+    public func v_array(vue:Vue){
         
         vue.setupVue {
             self.array = vue.v_array
@@ -103,9 +103,9 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
     }
     
     //v_didSelect
-    typealias selectBlock = (_ index:Int) -> ()
-    var block:selectBlock?
-    func v_didSelect(vue:@escaping selectBlock){
+    public typealias selectBlock = (_ index:Int) -> ()
+    public var block:selectBlock?
+    public func v_didSelect(vue:@escaping selectBlock){
         
         block = vue
         
@@ -113,8 +113,8 @@ class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
     
     
     //v-index
-    var vue:Vue?
-    func v_index(vue:Vue){
+    public var vue:Vue?
+    public func v_index(vue:Vue){
         
         self.vue = vue
         

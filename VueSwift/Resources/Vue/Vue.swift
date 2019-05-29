@@ -7,33 +7,33 @@
 //
 
 import UIKit
-typealias VueBlock = () -> ()
-class Vue: NSObject {
-    var array = Array<VueBlock>()
+public typealias VueBlock = () -> ()
+public class Vue: NSObject {
+    private var array = Array<VueBlock>()
     
     
-    var v_text:String?
-    func v_text(v:()->String?){
+    internal var v_text:String?
+    public func v_text(v:()->String?){
         
         v_text = v()
         sendVueMsg()
     }
     
-    var v_image:UIImage?
-    func v_image(v:()->UIImage?){
+    internal var v_image:UIImage?
+    public func v_image(v:()->UIImage?){
         
         v_image = v()
         sendVueMsg()
     }
-    var v_blind:[String:Any]?
-    func v_blind(v:()->[String:Any]?){
+    internal var v_blind:[String:Any]?
+    public func v_blind(v:()->[String:Any]?){
         
         v_blind = v()
         sendVueMsg()
     }
     
-    var v_if:Bool?
-    func v_if(v:()->Bool?){
+    internal var v_if:Bool?
+    public func v_if(v:()->Bool?){
         
         v_if = v()
         sendVueMsg()
@@ -41,32 +41,32 @@ class Vue: NSObject {
     
     
     
-    var v_on:VueBlock?
-    func v_on(vue:@escaping VueBlock){
+    internal var v_on:VueBlock?
+    public func v_on(vue:@escaping VueBlock){
         
         self.v_on = vue
         
     }
     
-    var v_input:VueBlock?
-    func v_input(vue:@escaping VueBlock){
+    internal var v_input:VueBlock?
+    public func v_input(vue:@escaping VueBlock){
         
         self.v_input = vue
         
     }
     
     
-    typealias VueIndexBlock = (_ index:Int) -> ()
-    var v_index:VueIndexBlock?
-    func v_index(vue:@escaping VueIndexBlock){
+    public typealias VueIndexBlock = (_ index:Int) -> ()
+    internal var v_index:VueIndexBlock?
+    public func v_index(vue:@escaping VueIndexBlock){
         
         self.v_index = vue
         
     }
     
     
-    var v_array:Array<VueData>?
-    func v_array(_ isPage:Bool,v:()->Array<VueData>?){
+    internal var v_array:Array<VueData>?
+    public func v_array(_ isPage:Bool,v:()->Array<VueData>?){
         if isPage{
             if let arr = v(),let v_arr = v_array{
                 
@@ -86,12 +86,12 @@ class Vue: NSObject {
     
     
     
-    func setupVue(_ callBack:@escaping VueBlock){
+   internal func setupVue(_ callBack:@escaping VueBlock){
         
         array.append(callBack)
         
     }
-    func sendVueMsg(){
+    internal func sendVueMsg(){
         
         for value in array{
             

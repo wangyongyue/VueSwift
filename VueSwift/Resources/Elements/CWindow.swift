@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CWindow: UIView {
+public class CWindow: UIView {
 
-    var disappear = false
+    private var disappear = false
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,7 +31,7 @@ class CWindow: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.disappear{
             self.removeFromSuperview()
             

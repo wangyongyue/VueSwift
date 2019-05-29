@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CText: UITextView ,UITextViewDelegate{
+open class CText: UITextView ,UITextViewDelegate{
 
     
     //{{ msg }}
-    func v_text(vue:Vue){
+    public func v_text(vue:Vue){
         
         vue.setupVue {
             self.text = vue.v_text
@@ -20,7 +20,7 @@ class CText: UITextView ,UITextViewDelegate{
         
     }
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
 
             if let dic = vue.v_blind{
@@ -31,7 +31,7 @@ class CText: UITextView ,UITextViewDelegate{
         
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
 
@@ -44,7 +44,7 @@ class CText: UITextView ,UITextViewDelegate{
     
     //v-input
     private var vue:Vue?
-    func v_input(vue:Vue){
+    public func v_input(vue:Vue){
         
         self.vue = vue
         self.delegate = self
@@ -65,9 +65,9 @@ class CText: UITextView ,UITextViewDelegate{
     
     
     //v-change
-    typealias changeBlock = (_ text:String) ->()
-    var block:changeBlock?
-    func v_change(vue:@escaping changeBlock){
+    public typealias changeBlock = (_ text:String) ->()
+    private var block:changeBlock?
+    public func v_change(vue:@escaping changeBlock){
         
         block = vue
         self.delegate = self

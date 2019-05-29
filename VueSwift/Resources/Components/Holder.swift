@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Holder: NSObject {
+open class Holder: NSObject {
     
-    var v_selectVue = Vue()
-    var model:VueData?
-    func setModel(_ amodel:VueData){ self.model = amodel}
+    public var v_selectVue = Vue()
+    open var model:VueData?
+    open func setModel(_ amodel:VueData){ self.model = amodel}
 
 }

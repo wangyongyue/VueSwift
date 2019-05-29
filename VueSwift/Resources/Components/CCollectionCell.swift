@@ -8,17 +8,17 @@
 
 import UIKit
 
-class CCollectionCell: UICollectionViewCell {
+open class CCollectionCell: UICollectionViewCell {
     
-    var holder:Holder?
+    open var holder:Holder?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
     }
     
-    func setModel(_ amodel:VueData){}
+    open func setModel(_ amodel:VueData){}
 }

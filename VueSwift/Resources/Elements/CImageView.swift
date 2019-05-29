@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CImageView: UIImageView {
+open class CImageView: UIImageView {
 
     //v-image
-    func v_image(vue:Vue){
+    public func v_image(vue:Vue){
         
         vue.setupVue {
             self.image = vue.v_image
@@ -19,7 +19,7 @@ class CImageView: UIImageView {
         
     }
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
 
             if let dic = vue.v_blind{
@@ -28,7 +28,7 @@ class CImageView: UIImageView {
         }
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
 

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDataSource{
+public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDataSource{
 
-    static var templates = Array<AnyClass>()
-    var array:Array<VueData>?
+    public static var templates = Array<AnyClass>()
+    public var array:Array<VueData>?
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
@@ -27,16 +27,16 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = array?.count{
             return count
         }
         return 0
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let model = array?[indexPath.row]
         if let m = model,let palm = model?.v_palm{
@@ -55,7 +55,7 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
         
     }
     
-    func register(_ templates:Array<AnyClass>){
+    public func register(_ templates:Array<AnyClass>){
 
         for value in templates{
             let className:String=NSStringFromClass(value).components(separatedBy: ".").last!
@@ -64,7 +64,7 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
     }
    
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
             
             if let dic = vue.v_blind{
@@ -74,7 +74,7 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
         
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
             
@@ -86,7 +86,7 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
     }
     
     //v-array
-    func v_array(vue:Vue){
+    public func v_array(vue:Vue){
         
         vue.setupVue {
             self.array = vue.v_array
@@ -98,9 +98,9 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
     
     
     //v_didSelect
-    typealias selectBlock = (_ index:Int) -> ()
-    var block:selectBlock?
-    func v_didSelect(vue:@escaping selectBlock){
+    public typealias selectBlock = (_ index:Int) -> ()
+    public var block:selectBlock?
+    public func v_didSelect(vue:@escaping selectBlock){
         
         block = vue
         
@@ -108,8 +108,8 @@ class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDa
     
     
     //v-index
-    var vue:Vue?
-    func v_index(vue:Vue){
+    public var vue:Vue?
+    public func v_index(vue:Vue){
         
         self.vue = vue
         

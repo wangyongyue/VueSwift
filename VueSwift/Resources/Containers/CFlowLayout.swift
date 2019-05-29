@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CFlowLayout: UICollectionViewFlowLayout {
+open class CFlowLayout: UICollectionViewFlowLayout {
 
     override init() {
         super.init()
     }
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    init(_ itemSize:CGSize,_ scrollDirection:UICollectionView.ScrollDirection) {
+    public init(_ itemSize:CGSize,_ scrollDirection:UICollectionView.ScrollDirection) {
         super.init()
         self.itemSize = itemSize
         self.scrollDirection = scrollDirection

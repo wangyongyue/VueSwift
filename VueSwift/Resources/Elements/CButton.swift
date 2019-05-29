@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CButton: UIButton {
+open class CButton: UIButton {
 
     //{{ msg }}
-    func v_text(vue:Vue){
+    public func v_text(vue:Vue){
         
         vue.setupVue {
             self.setTitle(vue.v_text, for: .normal)
@@ -19,7 +19,7 @@ class CButton: UIButton {
         
     }
     //v-image
-    func v_image(vue:Vue){
+    public func v_image(vue:Vue){
         
         vue.setupVue {
             self.setImage(vue.v_image, for: .normal)
@@ -27,7 +27,7 @@ class CButton: UIButton {
         
     }
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
             
             if let dic = vue.v_blind{
@@ -37,7 +37,7 @@ class CButton: UIButton {
         
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
             
@@ -48,8 +48,8 @@ class CButton: UIButton {
         
     }
     //v-on
-    var vue:Vue?
-    func v_on(vue:Vue){
+    private var vue:Vue?
+    public func v_on(vue:Vue){
         
         self.addTarget(self, action: #selector(clickEvent), for: .touchUpInside)
         self.vue = vue
@@ -62,8 +62,8 @@ class CButton: UIButton {
     }
 
     //v-click
-    var block:VueBlock?
-    func v_click(vue:@escaping VueBlock){
+    private var block:VueBlock?
+    public func v_click(vue:@escaping VueBlock){
         
         self.addTarget(self, action: #selector(clickNewEvent), for: .touchUpInside)
         block = vue

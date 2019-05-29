@@ -8,103 +8,103 @@
 
 import UIKit
 
-class Style: NSObject {
+public class Style: NSObject {
 
     
-    var x:CGFloat?
-    func x(_ x:CGFloat) -> Style{
+    internal var x:CGFloat?
+    public func x(_ x:CGFloat) -> Style{
         self.x = x
         return self
     }
-    var y:CGFloat?
-    func y(_ y:CGFloat) -> Style{
+    internal var y:CGFloat?
+    public func y(_ y:CGFloat) -> Style{
         self.y = y
         return self
     }
-    var width:CGFloat?
-    func width(_ width:CGFloat) -> Style{
+    internal var width:CGFloat?
+    public func width(_ width:CGFloat) -> Style{
         self.width = width
         return self
     }
-    var height:CGFloat?
-    func height(_ height:CGFloat) -> Style{
+    internal var height:CGFloat?
+    public func height(_ height:CGFloat) -> Style{
         self.height = height
         return self
     }
     
-    var backgroundColor:UIColor?
-    func backgroundColor(_ color:UIColor) -> Style{
+    internal var backgroundColor:UIColor?
+    public func backgroundColor(_ color:UIColor) -> Style{
         backgroundColor = color
         return self
     }
     
-    var font:UIFont?
-    func font(_ font:UIFont) -> Style{
+    internal var font:UIFont?
+    public func font(_ font:UIFont) -> Style{
         self.font = font
         return self
     }
     
-    var textColor:UIColor?
-    func textColor(_ textColor:UIColor) -> Style{
+    internal var textColor:UIColor?
+    public func textColor(_ textColor:UIColor) -> Style{
         self.textColor = textColor
         return self
     }
-    var isHidden:Bool?
-    func isHidden(_ isHidden:Bool) -> Style{
+    internal var isHidden:Bool?
+    public func isHidden(_ isHidden:Bool) -> Style{
         self.isHidden = isHidden
         return self
     }
-    var placeholder:String?
-    func placeholder(_ placeholder:String) -> Style{
+    internal var placeholder:String?
+    public func placeholder(_ placeholder:String) -> Style{
         self.placeholder = placeholder
         return self
     }
-    var borderStyle:UITextField.BorderStyle?
-    func borderStyle(_ borderStyle:UITextField.BorderStyle) -> Style{
+    internal var borderStyle:UITextField.BorderStyle?
+    public func borderStyle(_ borderStyle:UITextField.BorderStyle) -> Style{
         self.borderStyle = borderStyle
         return self
     }
-    var numberOfLines:Int?
-    func numberOfLines(_ numberOfLines:Int) -> Style{
+    internal var numberOfLines:Int?
+    public func numberOfLines(_ numberOfLines:Int) -> Style{
         self.numberOfLines = numberOfLines
         return self
     }
-    var textAlignment:NSTextAlignment?
-    func textAlignment(_ textAlignment:NSTextAlignment) -> Style{
+    internal var textAlignment:NSTextAlignment?
+    public func textAlignment(_ textAlignment:NSTextAlignment) -> Style{
         self.textAlignment = textAlignment
         return self
     }
-    var clearsOnBeginEditing:Bool?
-    func clearsOnBeginEditing(_ clearsOnBeginEditing:Bool) -> Style{
+    internal var clearsOnBeginEditing:Bool?
+    public func clearsOnBeginEditing(_ clearsOnBeginEditing:Bool) -> Style{
         self.clearsOnBeginEditing = clearsOnBeginEditing
         return self
     }
-    var image:UIImage?
-    func image(_ aimage:UIImage) -> Style{
+    internal var image:UIImage?
+    public func image(_ aimage:UIImage) -> Style{
         self.image = aimage
         return self
     }
     
-    var selectedImage:UIImage?
-    func selectedImage(_ aimage:UIImage) -> Style{
+    internal var selectedImage:UIImage?
+    public func selectedImage(_ aimage:UIImage) -> Style{
         self.selectedImage = aimage
         return self
     }
     
   
-    var selectedTextColor:UIColor?
-    func selectedTextColor(_ textColor:UIColor) -> Style{
+    internal var selectedTextColor:UIColor?
+    public func selectedTextColor(_ textColor:UIColor) -> Style{
         self.selectedTextColor = textColor
         return self
     }
   
-    var text:String?
-    func text(_ text:String) -> Style{
+    internal var text:String?
+    public func text(_ text:String) -> Style{
         self.text = text
         return self
     }
-    var selectedText:String?
-    func selectedText(_ text:String) -> Style{
+    internal var selectedText:String?
+    public func selectedText(_ text:String) -> Style{
         self.selectedText = text
         return self
     }
@@ -114,8 +114,7 @@ class Style: NSObject {
 extension UIView{
     
     
-    
-    convenience init(_ style:Style){
+     public convenience init(_ style:Style){
         self.init()
         
         self.backgroundColor = style.backgroundColor

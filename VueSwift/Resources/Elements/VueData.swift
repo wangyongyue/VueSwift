@@ -8,8 +8,8 @@
 
 import UIKit
 
-class VueData: NSObject {
+open class VueData: NSObject {
 
-    var v_palm:String?
-    var eventIdentifier:Int = 0
+    public var v_palm:String?
+    public var eventIdentifier:Int = 0
 }

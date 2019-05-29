@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CLabel: UILabel {
+open class CLabel: UILabel {
 
     //{{ msg }}
-    func v_text(vue:Vue){
+    public func v_text(vue:Vue){
         
         vue.setupVue {
             self.text = vue.v_text
@@ -19,7 +19,7 @@ class CLabel: UILabel {
         
     }
     //v-bind
-    func v_bind(vue:Vue){
+    public func v_bind(vue:Vue){
         vue.setupVue {
 
             if let dic = vue.v_blind{
@@ -29,7 +29,7 @@ class CLabel: UILabel {
         
     }
     //v-if
-    func v_if(vue:Vue){
+    public func v_if(vue:Vue){
         
         vue.setupVue {
             
