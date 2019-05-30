@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187CFB85229FCA0E0002837C /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CFB84229FCA0E0002837C /* Details.swift */; };
 		18B5FBC2229D04A200B6BDBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBC1229D04A200B6BDBB /* AppDelegate.swift */; };
 		18B5FBC4229D04A200B6BDBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBC3229D04A200B6BDBB /* ViewController.swift */; };
 		18B5FBC7229D04A200B6BDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B5FBC5229D04A200B6BDBB /* Main.storyboard */; };
@@ -25,18 +26,14 @@
 		18B5FC09229D063D00B6BDBB /* CTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC08229D063D00B6BDBB /* CTable.swift */; };
 		18B5FC0C229D064500B6BDBB /* CFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */; };
 		18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0B229D064500B6BDBB /* CCollection.swift */; };
-		18B5FC0F229D065600B6BDBB /* Holder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0E229D065600B6BDBB /* Holder.swift */; };
-		18B5FC11229D067500B6BDBB /* CTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC10229D067500B6BDBB /* CTableCell.swift */; };
-		18B5FC13229D069800B6BDBB /* CCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC12229D069800B6BDBB /* CCollectionCell.swift */; };
 		18B5FC15229D06C600B6BDBB /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC14229D06C600B6BDBB /* Style.swift */; };
 		18B5FC17229D06D800B6BDBB /* CGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC16229D06D800B6BDBB /* CGesture.swift */; };
 		18B5FC19229D06E400B6BDBB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC18229D06E400B6BDBB /* Router.swift */; };
 		18B5FC1B229D070800B6BDBB /* Vue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1A229D070800B6BDBB /* Vue.swift */; };
 		18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1D229D0B3200B6BDBB /* MainCell.swift */; };
 		18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1E229D0B3200B6BDBB /* MainVC.swift */; };
-		18B5FC23229D0B3900B6BDBB /* MainDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC21229D0B3800B6BDBB /* MainDetailsVC.swift */; };
-		18B5FC24229D0B3900B6BDBB /* MainDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC22229D0B3900B6BDBB /* MainDetailsCell.swift */; };
 		18C08344229E5BAC005DC71A /* VueData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C08343229E5BAC005DC71A /* VueData.swift */; };
+		18C0834C229FA423005DC71A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0834B229FA423005DC71A /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		187CFB84229FCA0E0002837C /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		18B5FBBE229D04A200B6BDBB /* VueSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VueSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B5FBC1229D04A200B6BDBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B5FBC3229D04A200B6BDBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,18 +79,14 @@
 		18B5FC08229D063D00B6BDBB /* CTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTable.swift; sourceTree = "<group>"; };
 		18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFlowLayout.swift; sourceTree = "<group>"; };
 		18B5FC0B229D064500B6BDBB /* CCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCollection.swift; sourceTree = "<group>"; };
-		18B5FC0E229D065600B6BDBB /* Holder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Holder.swift; sourceTree = "<group>"; };
-		18B5FC10229D067500B6BDBB /* CTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTableCell.swift; sourceTree = "<group>"; };
-		18B5FC12229D069800B6BDBB /* CCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCollectionCell.swift; sourceTree = "<group>"; };
 		18B5FC14229D06C600B6BDBB /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		18B5FC16229D06D800B6BDBB /* CGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGesture.swift; sourceTree = "<group>"; };
 		18B5FC18229D06E400B6BDBB /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		18B5FC1A229D070800B6BDBB /* Vue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vue.swift; sourceTree = "<group>"; };
 		18B5FC1D229D0B3200B6BDBB /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		18B5FC1E229D0B3200B6BDBB /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		18B5FC21229D0B3800B6BDBB /* MainDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailsVC.swift; sourceTree = "<group>"; };
-		18B5FC22229D0B3900B6BDBB /* MainDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailsCell.swift; sourceTree = "<group>"; };
 		18C08343229E5BAC005DC71A /* VueData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueData.swift; sourceTree = "<group>"; };
+		18C0834B229FA423005DC71A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187CFB86229FCCE20002837C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18B5FC1C229D0B2900B6BDBB /* main */,
+				18C0834A229FA1F7005DC71A /* Details */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		18B5FBB5229D04A200B6BDBB = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +148,9 @@
 			children = (
 				18B5FBC1229D04A200B6BDBB /* AppDelegate.swift */,
 				18B5FBC3229D04A200B6BDBB /* ViewController.swift */,
-				18B5FC1C229D0B2900B6BDBB /* main */,
+				187CFB86229FCCE20002837C /* Models */,
+				18C08349229FA1D0005DC71A /* ViewControllers */,
+				18C08348229FA1CD005DC71A /* Views */,
 				18B5FBEF229D04CB00B6BDBB /* Resources */,
 				18B5FBC5229D04A200B6BDBB /* Main.storyboard */,
 				18B5FBC8229D04AE00B6BDBB /* Assets.xcassets */,
@@ -179,8 +184,7 @@
 				18B5FBF4229D052500B6BDBB /* Vue */,
 				18B5FBF3229D052200B6BDBB /* Router */,
 				18B5FBF2229D051F00B6BDBB /* Style */,
-				18B5FBF1229D051C00B6BDBB /* Containers */,
-				18B5FBF5229D058000B6BDBB /* Components */,
+				18B5FBF1229D051C00B6BDBB /* Components */,
 				18B5FBF0229D051A00B6BDBB /* Elements */,
 			);
 			path = Resources;
@@ -203,14 +207,14 @@
 			path = Elements;
 			sourceTree = "<group>";
 		};
-		18B5FBF1229D051C00B6BDBB /* Containers */ = {
+		18B5FBF1229D051C00B6BDBB /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				18B5FC08229D063D00B6BDBB /* CTable.swift */,
 				18B5FC0B229D064500B6BDBB /* CCollection.swift */,
 				18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */,
 			);
-			path = Containers;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		18B5FBF2229D051F00B6BDBB /* Style */ = {
@@ -237,25 +241,36 @@
 			path = Vue;
 			sourceTree = "<group>";
 		};
-		18B5FBF5229D058000B6BDBB /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				18B5FC0E229D065600B6BDBB /* Holder.swift */,
-				18B5FC10229D067500B6BDBB /* CTableCell.swift */,
-				18B5FC12229D069800B6BDBB /* CCollectionCell.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		18B5FC1C229D0B2900B6BDBB /* main */ = {
 			isa = PBXGroup;
 			children = (
-				18B5FC1D229D0B3200B6BDBB /* MainCell.swift */,
-				18B5FC1E229D0B3200B6BDBB /* MainVC.swift */,
-				18B5FC22229D0B3900B6BDBB /* MainDetailsCell.swift */,
-				18B5FC21229D0B3800B6BDBB /* MainDetailsVC.swift */,
+				18C0834B229FA423005DC71A /* Main.swift */,
 			);
 			path = main;
+			sourceTree = "<group>";
+		};
+		18C08348229FA1CD005DC71A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18B5FC1D229D0B3200B6BDBB /* MainCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18C08349229FA1D0005DC71A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18B5FC1E229D0B3200B6BDBB /* MainVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		18C0834A229FA1F7005DC71A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				187CFB84229FCA0E0002837C /* Details.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,23 +407,20 @@
 				18B5FBFB229D05F800B6BDBB /* CLabel.swift in Sources */,
 				18B5FBF9229D05F000B6BDBB /* CView.swift in Sources */,
 				18B5FBC4229D04A200B6BDBB /* ViewController.swift in Sources */,
-				18B5FC24229D0B3900B6BDBB /* MainDetailsCell.swift in Sources */,
 				18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */,
 				18B5FBF7229D05E800B6BDBB /* CViewController.swift in Sources */,
 				18B5FBC2229D04A200B6BDBB /* AppDelegate.swift in Sources */,
+				187CFB85229FCA0E0002837C /* Details.swift in Sources */,
 				18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */,
-				18B5FC11229D067500B6BDBB /* CTableCell.swift in Sources */,
 				18B5FC15229D06C600B6BDBB /* Style.swift in Sources */,
 				18B5FBFF229D060400B6BDBB /* CImageView.swift in Sources */,
 				18C08344229E5BAC005DC71A /* VueData.swift in Sources */,
 				18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */,
-				18B5FC0F229D065600B6BDBB /* Holder.swift in Sources */,
 				18B5FC01229D060A00B6BDBB /* CField.swift in Sources */,
+				18C0834C229FA423005DC71A /* Main.swift in Sources */,
 				18B5FC19229D06E400B6BDBB /* Router.swift in Sources */,
 				18B5FC17229D06D800B6BDBB /* CGesture.swift in Sources */,
-				18B5FC13229D069800B6BDBB /* CCollectionCell.swift in Sources */,
 				18B5FC05229D061700B6BDBB /* CWindow.swift in Sources */,
-				18B5FC23229D0B3900B6BDBB /* MainDetailsVC.swift in Sources */,
 				18B5FC1B229D070800B6BDBB /* Vue.swift in Sources */,
 				18B5FBFD229D05FE00B6BDBB /* CButton.swift in Sources */,
 				18B5FC09229D063D00B6BDBB /* CTable.swift in Sources */,

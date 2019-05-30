@@ -40,18 +40,20 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
         
         let model = array?[indexPath.row]
         if let m = model,let palm = model?.v_palm{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: palm, for: indexPath) as! CCollectionCell
-            cell.setModel(m)
-            cell.holder?.v_selectVue.v_on {
-
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: palm, for: indexPath)
+            if cell is CellProtocol{
+                let aCell = cell as! CellProtocol
+                aCell.setModel(m)
+            }
+            m.v_selectVue.v_on {
+                
                 self.block?(indexPath.row)
                 self.vue?.v_index?(indexPath.row)
             }
             
-            
             return cell
         }
-        return CCollectionCell()
+        return UICollectionViewCell()
         
     }
     

@@ -10,7 +10,6 @@ import UIKit
 
 public class Style: NSObject {
 
-    
     internal var x:CGFloat?
     public func x(_ x:CGFloat) -> Style{
         self.x = x

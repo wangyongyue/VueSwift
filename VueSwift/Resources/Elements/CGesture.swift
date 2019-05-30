@@ -19,9 +19,9 @@ public class CGesture: UITapGestureRecognizer {
         self.addTarget(self, action: #selector(tapEvent))
     }
     
-    public var eventVue:Vue?
-    public convenience init(vue:Vue){
-        self.init()
+    internal var eventVue:Vue?
+    public func v_on(vue:Vue){
+        
         eventVue = vue
         self.addTarget(self, action: #selector(tapEvent))
     }

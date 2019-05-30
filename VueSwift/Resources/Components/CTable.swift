@@ -37,11 +37,14 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = array?[indexPath.row]
         if let m = model ,let palm = model?.v_palm {
-            let cell = self.dequeueReusableCell(withIdentifier: palm, for: indexPath) as! CTableCell
+            let cell = self.dequeueReusableCell(withIdentifier: palm, for: indexPath)
             cell.selectionStyle = .none
-            cell.setModel(m)
+            if cell is CellProtocol{
+                let aCell = cell as! CellProtocol
+                aCell.setModel(m)
+            }
             
-            cell.holder?.v_selectVue.v_on {
+            m.v_selectVue.v_on {
                 
                 self.block?(indexPath.row)
                 self.vue?.v_index?(indexPath.row)
@@ -49,7 +52,7 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
             return cell
         }
        
-        return CTableCell()
+        return UITableViewCell()
         
     }
     
@@ -120,12 +123,11 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         
     }
    
-   
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        block?(indexPath.row)
-//
-//        self.vue?.v_index?(indexPath.row)
-//    }
+
+}
+
+public protocol CellProtocol{
+    
+    func setModel(_ amodel:VueData)
 
 }

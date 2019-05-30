@@ -8,8 +8,9 @@
 
 import UIKit
 
-open class VueData: NSObject {
+public protocol VueData {
 
-    public var v_palm:String?
-    public var eventIdentifier:Int = 0
+    var v_palm:String{get}
+    var v_identifier:Int{get}
+    var v_selectVue:Vue{get}
 }
