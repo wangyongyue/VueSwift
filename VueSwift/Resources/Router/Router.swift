@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Router: NSObject {
+public class Router {
     
     
     public class func navigationController() -> UINavigationController?{

@@ -8,7 +8,7 @@
 
 import UIKit
 public typealias VueBlock = () -> ()
-public class Vue: NSObject {
+public class Vue {
     private var array = Array<VueBlock>()
     
     
