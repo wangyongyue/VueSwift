@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Style: NSObject {
+public class Style {
 
     internal var x:CGFloat?
     public func x(_ x:CGFloat) -> Style{
