@@ -1,6 +1,6 @@
 //
 //  CGesture.swift
-//  CatFlow
+//  VueSwift
 //
 //  Created by wangyongyue on 2019/5/26.
 //  Copyright © 2019 wyy. All rights reserved.
