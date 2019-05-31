@@ -26,13 +26,11 @@ class Main:MainProtocol{
             print(m.v_identifier)
             if m.v_identifier == 0{
                 
-                
                 Router.push(Details().getViewController(), ["id":"10"], nil)
                 
             }
             
         }
-        
         
     }
     
@@ -92,7 +90,7 @@ class MainModel: VueData,MainCellProtocol{
         clickVue.v_on {
             
             self.v_identifier = 1
-            
+            print("click")
         }
         tapVue.v_on {
             self.v_identifier = 0

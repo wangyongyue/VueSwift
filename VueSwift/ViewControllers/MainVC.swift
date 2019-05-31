@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MainVC: CViewController {
+class MainVC: UIViewController {
 
     
     var m:MainProtocol?

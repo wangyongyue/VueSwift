@@ -65,27 +65,6 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
         }
     }
    
-    //v-bind
-    public func v_bind(vue:Vue){
-        vue.setupVue {
-            
-            if let dic = vue.v_blind{
-                self.setValuesForKeys(dic)
-            }
-        }
-        
-    }
-    //v-if
-    public func v_if(vue:Vue){
-        
-        vue.setupVue {
-            
-            if let v = vue.v_if{
-                self.isHidden = v
-            }
-        }
-        
-    }
     
     //v-array
     public func v_array(vue:Vue){

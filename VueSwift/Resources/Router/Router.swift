@@ -15,9 +15,7 @@ public class Router :NSObject {
         
         let vc = UIApplication.shared.keyWindow?.rootViewController
         
-        if vc is CViewController{
-            return nil
-        }
+       
         if vc is UINavigationController{
             return vc as? UINavigationController
         }
@@ -37,11 +35,14 @@ public class Router :NSObject {
         return nil
     }
     
-    public class func currentController() -> CViewController{
+    public class func currentController() -> UIViewController{
         
         let controller = navigationController()
         
-        return controller?.viewControllers.last as! CViewController
+        if let vc = controller?.viewControllers.last{
+            return vc
+        }
+        return UIViewController()
     }
     public class func params() -> [String:Any]?{
         
@@ -52,11 +53,9 @@ public class Router :NSObject {
     }
     public class func push(_ viewController: UIViewController,_ params:[String:Any]?,_ block:popCallBack?){
         
-        if viewController is CViewController{
-            let vc = viewController as! CViewController
-            vc.params = params
-            vc.call = block
-        }
+        let vc = viewController
+        vc.params = params
+        vc.call = block
         navigationController()?.pushViewController(viewController, animated: true)
     }
     
@@ -70,7 +69,7 @@ public class Router :NSObject {
         navigationController()?.popViewController(animated: true)
     }
     
-    public class func popViewController(_ toClass:AnyClass,_ objc:AnyObject?){
+    public class func popViewController(toClass:AnyClass,_ objc:AnyObject?){
         
         if let arr = navigationController()?.viewControllers{
             
@@ -80,10 +79,9 @@ public class Router :NSObject {
                     if objc != nil{
                         if let num = navigationController()?.viewControllers.count {
                             if num <= index + 1{return}
-                            let controllerNext = navigationController()?.viewControllers[index + 1]
-                            let vc = controllerNext as! CViewController
-                            vc.call?(objc)
-                            
+                            let vc = navigationController()?.viewControllers[index + 1]
+                            vc?.call?(objc)
+
                         }
                     }
                     navigationController()?.popToViewController(value, animated: true)
@@ -91,6 +89,25 @@ public class Router :NSObject {
                 }
             }
             
+        }
+        
+        
+    }
+    public class func popViewController(toIndex:Int,_ objc:AnyObject?){
+        
+        if let arr = navigationController()?.viewControllers{
+            if arr.count > (toIndex + 1){
+                
+                let index = arr.count - toIndex - 1
+                let vc = navigationController()?.viewControllers[index]
+                let nextVC = navigationController()?.viewControllers[index+1]
+                nextVC?.call?(objc)
+                if let v = vc{
+                    navigationController()?.popToViewController(v, animated: true)
+                }
+
+            }
+          
         }
         
         

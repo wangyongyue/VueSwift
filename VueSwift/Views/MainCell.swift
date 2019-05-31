@@ -11,9 +11,9 @@ import UIKit
 class MainCell: UITableViewCell,CellProtocol {
     
     
-    let label = CLabel()
-    let button = CButton()
-    let tap = CGesture()
+    let label = UILabel()
+    let button = UIButton()
+    let tap = UITapGestureRecognizer()
 
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -47,6 +47,7 @@ class MainCell: UITableViewCell,CellProtocol {
             label.v_text(vue: h.textVue)
             button.v_on(vue: h.clickVue)
             tap.v_on(vue: h.tapVue)
+            
             h.startListen()
         }
     }

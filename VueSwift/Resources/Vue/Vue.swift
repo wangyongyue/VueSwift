@@ -25,10 +25,10 @@ public class Vue :NSObject{
         v_image = v()
         sendVueMsg()
     }
-    internal var v_blind:[String:Any]?
-    public func v_blind(v:()->[String:Any]?){
+    internal var v_backgroundColor:UIColor?
+    public func v_backgroundColor(v:()->UIColor?){
         
-        v_blind = v()
+        v_backgroundColor = v()
         sendVueMsg()
     }
     
@@ -38,6 +38,14 @@ public class Vue :NSObject{
         v_if = v()
         sendVueMsg()
     }
+    
+    internal var v_selected:Bool?
+    public func v_selected(v:()->Bool?){
+        
+        v_selected = v()
+        sendVueMsg()
+    }
+    
     
     
     

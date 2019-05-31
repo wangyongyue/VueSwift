@@ -15,23 +15,13 @@
 		18B5FBCC229D04AE00B6BDBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B5FBCA229D04AE00B6BDBB /* LaunchScreen.storyboard */; };
 		18B5FBD7229D04AE00B6BDBB /* VueSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBD6229D04AE00B6BDBB /* VueSwiftTests.swift */; };
 		18B5FBE2229D04AE00B6BDBB /* VueSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBE1229D04AE00B6BDBB /* VueSwiftUITests.swift */; };
-		18B5FBF7229D05E800B6BDBB /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBF6229D05E800B6BDBB /* CViewController.swift */; };
-		18B5FBF9229D05F000B6BDBB /* CView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBF8229D05F000B6BDBB /* CView.swift */; };
-		18B5FBFB229D05F800B6BDBB /* CLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBFA229D05F800B6BDBB /* CLabel.swift */; };
-		18B5FBFD229D05FE00B6BDBB /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBFC229D05FE00B6BDBB /* CButton.swift */; };
-		18B5FBFF229D060400B6BDBB /* CImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBFE229D060400B6BDBB /* CImageView.swift */; };
-		18B5FC01229D060A00B6BDBB /* CField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC00229D060A00B6BDBB /* CField.swift */; };
-		18B5FC03229D061200B6BDBB /* CText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC02229D061200B6BDBB /* CText.swift */; };
-		18B5FC05229D061700B6BDBB /* CWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC04229D061700B6BDBB /* CWindow.swift */; };
+		18B5FBF9229D05F000B6BDBB /* extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FBF8229D05F000B6BDBB /* extension+View.swift */; };
 		18B5FC09229D063D00B6BDBB /* CTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC08229D063D00B6BDBB /* CTable.swift */; };
-		18B5FC0C229D064500B6BDBB /* CFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */; };
 		18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC0B229D064500B6BDBB /* CCollection.swift */; };
-		18B5FC17229D06D800B6BDBB /* CGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC16229D06D800B6BDBB /* CGesture.swift */; };
 		18B5FC19229D06E400B6BDBB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC18229D06E400B6BDBB /* Router.swift */; };
 		18B5FC1B229D070800B6BDBB /* Vue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1A229D070800B6BDBB /* Vue.swift */; };
 		18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1D229D0B3200B6BDBB /* MainCell.swift */; };
 		18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1E229D0B3200B6BDBB /* MainVC.swift */; };
-		18C08344229E5BAC005DC71A /* VueData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C08343229E5BAC005DC71A /* VueData.swift */; };
 		18C0834C229FA423005DC71A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0834B229FA423005DC71A /* Main.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,23 +57,13 @@
 		18B5FBDD229D04AE00B6BDBB /* VueSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VueSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B5FBE1229D04AE00B6BDBB /* VueSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueSwiftUITests.swift; sourceTree = "<group>"; };
 		18B5FBE3229D04AE00B6BDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18B5FBF6229D05E800B6BDBB /* CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
-		18B5FBF8229D05F000B6BDBB /* CView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CView.swift; sourceTree = "<group>"; };
-		18B5FBFA229D05F800B6BDBB /* CLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLabel.swift; sourceTree = "<group>"; };
-		18B5FBFC229D05FE00B6BDBB /* CButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
-		18B5FBFE229D060400B6BDBB /* CImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CImageView.swift; sourceTree = "<group>"; };
-		18B5FC00229D060A00B6BDBB /* CField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CField.swift; sourceTree = "<group>"; };
-		18B5FC02229D061200B6BDBB /* CText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CText.swift; sourceTree = "<group>"; };
-		18B5FC04229D061700B6BDBB /* CWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWindow.swift; sourceTree = "<group>"; };
+		18B5FBF8229D05F000B6BDBB /* extension+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension+View.swift"; sourceTree = "<group>"; };
 		18B5FC08229D063D00B6BDBB /* CTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTable.swift; sourceTree = "<group>"; };
-		18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFlowLayout.swift; sourceTree = "<group>"; };
 		18B5FC0B229D064500B6BDBB /* CCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCollection.swift; sourceTree = "<group>"; };
-		18B5FC16229D06D800B6BDBB /* CGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGesture.swift; sourceTree = "<group>"; };
 		18B5FC18229D06E400B6BDBB /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		18B5FC1A229D070800B6BDBB /* Vue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vue.swift; sourceTree = "<group>"; };
 		18B5FC1D229D0B3200B6BDBB /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		18B5FC1E229D0B3200B6BDBB /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		18C08343229E5BAC005DC71A /* VueData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueData.swift; sourceTree = "<group>"; };
 		18C0834B229FA423005DC71A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,26 +162,17 @@
 				18B5FBF4229D052500B6BDBB /* Vue */,
 				18B5FBF3229D052200B6BDBB /* Router */,
 				18B5FBF1229D051C00B6BDBB /* Components */,
-				18B5FBF0229D051A00B6BDBB /* Elements */,
+				18B5FBF0229D051A00B6BDBB /* extension */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		18B5FBF0229D051A00B6BDBB /* Elements */ = {
+		18B5FBF0229D051A00B6BDBB /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				18B5FC16229D06D800B6BDBB /* CGesture.swift */,
-				18C08343229E5BAC005DC71A /* VueData.swift */,
-				18B5FBF6229D05E800B6BDBB /* CViewController.swift */,
-				18B5FBF8229D05F000B6BDBB /* CView.swift */,
-				18B5FBFA229D05F800B6BDBB /* CLabel.swift */,
-				18B5FBFC229D05FE00B6BDBB /* CButton.swift */,
-				18B5FBFE229D060400B6BDBB /* CImageView.swift */,
-				18B5FC00229D060A00B6BDBB /* CField.swift */,
-				18B5FC02229D061200B6BDBB /* CText.swift */,
-				18B5FC04229D061700B6BDBB /* CWindow.swift */,
+				18B5FBF8229D05F000B6BDBB /* extension+View.swift */,
 			);
-			path = Elements;
+			path = extension;
 			sourceTree = "<group>";
 		};
 		18B5FBF1229D051C00B6BDBB /* Components */ = {
@@ -209,7 +180,6 @@
 			children = (
 				18B5FC08229D063D00B6BDBB /* CTable.swift */,
 				18B5FC0B229D064500B6BDBB /* CCollection.swift */,
-				18B5FC0A229D064500B6BDBB /* CFlowLayout.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -393,27 +363,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B5FBFB229D05F800B6BDBB /* CLabel.swift in Sources */,
-				18B5FBF9229D05F000B6BDBB /* CView.swift in Sources */,
+				18B5FBF9229D05F000B6BDBB /* extension+View.swift in Sources */,
 				18B5FBC4229D04A200B6BDBB /* ViewController.swift in Sources */,
 				18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */,
-				18B5FBF7229D05E800B6BDBB /* CViewController.swift in Sources */,
 				18B5FBC2229D04A200B6BDBB /* AppDelegate.swift in Sources */,
 				187CFB85229FCA0E0002837C /* Details.swift in Sources */,
 				18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */,
-				18B5FBFF229D060400B6BDBB /* CImageView.swift in Sources */,
-				18C08344229E5BAC005DC71A /* VueData.swift in Sources */,
 				18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */,
-				18B5FC01229D060A00B6BDBB /* CField.swift in Sources */,
 				18C0834C229FA423005DC71A /* Main.swift in Sources */,
 				18B5FC19229D06E400B6BDBB /* Router.swift in Sources */,
-				18B5FC17229D06D800B6BDBB /* CGesture.swift in Sources */,
-				18B5FC05229D061700B6BDBB /* CWindow.swift in Sources */,
 				18B5FC1B229D070800B6BDBB /* Vue.swift in Sources */,
-				18B5FBFD229D05FE00B6BDBB /* CButton.swift in Sources */,
 				18B5FC09229D063D00B6BDBB /* CTable.swift in Sources */,
-				18B5FC03229D061200B6BDBB /* CText.swift in Sources */,
-				18B5FC0C229D064500B6BDBB /* CFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
