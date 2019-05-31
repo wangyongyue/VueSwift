@@ -26,7 +26,6 @@ private var vcBlockKey: UInt8 = 9
 public typealias popCallBack = (_ obj:AnyObject?) -> ()
 
 extension UIViewController{
-    
    
     public var params:[String:Any]? {
         set {

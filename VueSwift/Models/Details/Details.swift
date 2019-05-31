@@ -27,9 +27,6 @@ class Details:MainProtocol{
             if m.v_identifier == 0{
                 
                 
-                
-                
-                
             }
             
         }
@@ -64,9 +61,7 @@ class Details:MainProtocol{
             
             return array
         })
-        
-        
-        
+                
     }
     
     
