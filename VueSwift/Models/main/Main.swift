@@ -78,6 +78,7 @@ class MainModel: VueData,MainCellProtocol{
     
     var textVue:Vue = Vue()
     var clickVue:Vue = Vue()
+    var inputVue:Vue = Vue()
     var tapVue:Vue = Vue()
     var data:MainData?
     
@@ -97,6 +98,10 @@ class MainModel: VueData,MainCellProtocol{
             self.v_selectVue.v_on?()
         }
         
+        inputVue.v_input {
+            
+            print(self.inputVue.v_text)
+        }
     }
     
 }

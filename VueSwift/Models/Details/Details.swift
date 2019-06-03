@@ -75,7 +75,7 @@ class DetailsModel: VueData,MainCellProtocol{
     
     
     var textVue:Vue = Vue()
-    
+    var inputVue: Vue = Vue()
     var clickVue:Vue = Vue()
     var tapVue:Vue = Vue()
     var data:DetailsData?
