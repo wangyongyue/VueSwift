@@ -95,6 +95,17 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
         self.vue = vue
         
     }
+    //v-reload
+    public func v_reload(vue:Vue){
+        
+        vue.setupVue {
+            
+            self.reloadData()
+            
+        }
+        
+        
+    }
     
 
     

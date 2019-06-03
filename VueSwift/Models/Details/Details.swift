@@ -12,7 +12,8 @@ class Details:MainProtocol{
     
     var arrayVue: Vue = Vue()
     var indexVue: Vue = Vue()
-    
+    var reloadVue:Vue = Vue()
+
     func startListen() {
         
         

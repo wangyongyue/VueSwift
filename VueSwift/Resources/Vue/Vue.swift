@@ -63,6 +63,12 @@ public class Vue :NSObject{
         
     }
     
+    public func v_reload(){
+
+        sendVueMsg()
+
+    }
+  
     
     public typealias VueIndexBlock = (_ index:Int) -> ()
     public var v_index:VueIndexBlock?

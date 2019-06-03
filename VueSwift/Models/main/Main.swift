@@ -12,7 +12,8 @@ class Main:MainProtocol{
     
     var arrayVue: Vue = Vue()
     var indexVue: Vue = Vue()
-    
+    var reloadVue:Vue = Vue()
+
     func startListen() {
         
         
@@ -27,9 +28,9 @@ class Main:MainProtocol{
             if m.v_identifier == 0{
                 
                 Router.push(Details().getViewController(), ["id":"10"], nil)
-                
+//                m.data?.name = "123"
+//                self.reloadVue.v_reload()
             }
-            
         }
         
     }

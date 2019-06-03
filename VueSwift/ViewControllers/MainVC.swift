@@ -34,8 +34,13 @@ class MainVC: UIViewController {
         if let v = m?.indexVue{
             table.v_index(vue: v)
         }
-        
+        if let v = m?.reloadVue{
+            table.v_reload(vue: v)
+        }
         m?.startListen()
+        
+     
+        
     }
 
 }
@@ -43,6 +48,8 @@ protocol MainProtocol {
     
     var arrayVue:Vue{get}
     var indexVue:Vue{get}
+    var reloadVue:Vue{get}
+
     func startListen()
 
 }

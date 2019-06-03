@@ -101,6 +101,17 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         self.vue = vue
         
     }
+   //v-reload
+    public func v_reload(vue:Vue){
+        
+        vue.setupVue {
+            
+            self.reloadData()
+            
+        }
+        
+        
+    }
    
 
 }

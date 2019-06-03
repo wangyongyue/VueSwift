@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VueSwift"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.2"
   spec.summary      = "VueSwift "
   spec.homepage     = "https://github.com/wangyongyue/VueSwift"
   spec.license      = "MIT"
