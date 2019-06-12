@@ -27,7 +27,7 @@ class Main:MainProtocol{
             print(m.v_identifier)
             if m.v_identifier == 0{
                 
-                Router.push(Details().getViewController(), ["id":"10"], nil)
+                Router.push(Details.getViewController(), ["id":"10"], nil)
 //                m.data?.name = "123"
 //                self.reloadVue.v_reload()
             }
@@ -35,10 +35,10 @@ class Main:MainProtocol{
         
     }
     
-    func getViewController() -> UIViewController {
+    static func getViewController() -> UIViewController {
         
         let vc = MainVC()
-        vc.m = self
+        vc.m = Main()
         vc.navigationItem.title = "列表"
         return vc
         

@@ -35,10 +35,10 @@ class Details:MainProtocol{
         
     }
     
-    func getViewController() -> UIViewController {
+    static func getViewController() -> UIViewController {
         
         let vc = MainVC()
-        vc.m = self
+        vc.m = Details()
         vc.navigationItem.title = "详情列表"
         return vc
         
