@@ -19,6 +19,13 @@ public class Vue :NSObject{
         sendVueMsg()
     }
     
+    public var v_attributedText:NSAttributedString?
+    public func v_attributedText(v:()->NSAttributedString?){
+        
+        v_attributedText = v()
+        sendVueMsg()
+    }
+    
     public var v_image:UIImage?
     public func v_image(v:()->UIImage?){
         

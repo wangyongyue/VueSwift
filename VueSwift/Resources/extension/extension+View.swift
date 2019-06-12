@@ -129,7 +129,14 @@ extension UILabel{
         }
         
     }
-
+    public func v_attributedText(vue:Vue){
+        
+        vue.setupVue {
+            self.attributedText = vue.v_attributedText
+        }
+        
+    }
+    
     
 }
 
