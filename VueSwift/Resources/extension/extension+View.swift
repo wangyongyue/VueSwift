@@ -332,8 +332,9 @@ extension UITextView:UITextViewDelegate{
         self.delegate = self
 
     }
+
     
-    func textViewDidChange(_ textView: UITextView) {
+    public func textViewDidChange(_ textView: UITextView) {
         
         self.vue?.v_text(v: { () -> String? in
             return self.text
