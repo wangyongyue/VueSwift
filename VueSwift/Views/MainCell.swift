@@ -21,12 +21,12 @@ class MainCell: UITableViewCell {
         self.contentView.addSubview(label)
         label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: 15)
-        label.frame = CGRect.init(x: 20, y: 0, width:Screen.width()/2 - 20, height: 30)
+        label.frame = CGRect.init(x: 12, y: 0, width:100, height: 30)
         
-        button.setTitle("点赞", for: .normal)
+        button.setTitle("button", for: .normal)
         button.setTitleColor(UIColor.red, for: .normal)
         self.contentView.addSubview(button)
-        button.frame = CGRect.init(x: Screen.width() - 100, y: 0, width: 100, height: 100)
+        button.frame = CGRect.init(x: 200, y: 0, width:100, height: 100)
 
         self.contentView.addGestureRecognizer(tap)
 
@@ -57,11 +57,10 @@ class MainCell: UITableViewCell {
                 h.v_to()
 
             }
-            
+
         }
         
     }
-    
 }
 
 

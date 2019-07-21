@@ -24,6 +24,7 @@ public class Vue :NSObject{
         if let a = vId,let text = v(){
             blockTextDic[a]?(text)
         }
+ 
     }
     public func v_text(vId:String?,v:VueTextBlock?){
         if let a = vId,let b = v{
@@ -56,6 +57,7 @@ public class Vue :NSObject{
         if let a = vId,let b = v{
             blockImgDic[a] = b
         }
+
     }
     
     //if

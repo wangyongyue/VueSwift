@@ -8,8 +8,15 @@
 
 import UIKit
 
-class Main:Vue{
-        
+class Main:Vue,V_ViewControllerProtocol{
+
+    
+    func v_viewController() -> UIViewController {
+        let vc = MainVC()
+        vc.vue = self
+        vc.navigationItem.title = "列表"
+        return vc
+    }
     override func v_start() {
         
         var array = Array<VueData>()
@@ -31,7 +38,7 @@ class Main:Vue{
             print(m.v_identifier)
             if m.v_identifier == 0{
 
-                Router.push(Details().getViewController(), ["id":"10"], nil)
+                Router.push(Details(), ["id":"10"], nil)
 
             }
 
@@ -39,22 +46,14 @@ class Main:Vue{
         self.v_text(vId: labelID) { () -> String? in
             
             return "abcdefg"
+
         }
         
     }
     
-    func getViewController() -> UIViewController {
-        
-        let vc = MainVC()
-        vc.vue = self
-        vc.navigationItem.title = "列表"
-        return vc
-        
-    }
     
 }
 class MainModel: VueData{
-    
 
     var name:String?
     override func v_height() -> CGFloat {

@@ -140,6 +140,7 @@ extension UILabel{
         }
        
     }
+
     
 }
 
@@ -305,6 +306,7 @@ extension UITextField{
     
 }
 
+
 private var textVueKey: UInt8 = 4
 private var textClickKey: UInt8 = 5
 private var textVIDKey: UInt8 = 60
@@ -344,8 +346,9 @@ extension UITextView:UITextViewDelegate{
         self.delegate = self
 
     }
+
     
-    func textViewDidChange(_ textView: UITextView) {
+    public func textViewDidChange(_ textView: UITextView) {
         
         self.vue?.v_text(vId: self.vId, v: { () -> String? in
             

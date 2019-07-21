@@ -8,16 +8,14 @@
 
 import UIKit
 
-class Details:Vue{
+class Details:Vue,V_ViewControllerProtocol{
     
    
-    func getViewController() -> UIViewController {
-        
+    func v_viewController() -> UIViewController {
         let vc = MainVC()
         vc.vue = self
         vc.navigationItem.title = "详情列表"
         return vc
-        
     }
    
     override func v_start() {
@@ -34,13 +32,13 @@ class Details:Vue{
             
             return array
         }
-        
+      
+                
     }
-   
     
-   
     
 }
+
 class DetailsModel: VueData{
     
   

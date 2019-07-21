@@ -106,6 +106,7 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         
     }
    
+   
 
 }
 

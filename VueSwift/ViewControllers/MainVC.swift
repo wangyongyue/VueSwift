@@ -43,11 +43,9 @@ class MainVC: UIViewController {
         label.v_text(vId: labelID, vue: vue)
         vue?.v_start()
 
-        
     }
    
 }
-
 
 
 class Screen{

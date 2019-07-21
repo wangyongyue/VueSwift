@@ -24,7 +24,6 @@ class DetailsCell: UITableViewCell {
         label.font = UIFont.systemFont(ofSize: 15)
         label.frame = CGRect.init(x: 20, y: 0, width:Screen.width()/2 - 20, height: 30)
         
-       
         self.contentView.addGestureRecognizer(tap)
         
     }

@@ -12,7 +12,7 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
 
     public static var templates = Array<AnyClass>()
     public var array:Array<VueData>?
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+    public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
         self.backgroundColor = UIColor.clear
@@ -94,6 +94,7 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
         self.vue = vue
         
     }
+
 
 }
 extension UICollectionViewCell{
