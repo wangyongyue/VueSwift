@@ -23,6 +23,8 @@
 		18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1D229D0B3200B6BDBB /* MainCell.swift */; };
 		18B5FC20229D0B3200B6BDBB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5FC1E229D0B3200B6BDBB /* MainVC.swift */; };
 		18C0834C229FA423005DC71A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0834B229FA423005DC71A /* Main.swift */; };
+		458F064522E341C800271BB4 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F064422E341C800271BB4 /* DetailsCell.swift */; };
+		458F064722E4636400271BB4 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F064622E4636400271BB4 /* Interface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		18B5FC1D229D0B3200B6BDBB /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		18B5FC1E229D0B3200B6BDBB /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		18C0834B229FA423005DC71A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		458F064422E341C800271BB4 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		458F064622E4636400271BB4 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +130,10 @@
 			children = (
 				18B5FBC1229D04A200B6BDBB /* AppDelegate.swift */,
 				18B5FBC3229D04A200B6BDBB /* ViewController.swift */,
+				458F064622E4636400271BB4 /* Interface.swift */,
 				187CFB86229FCCE20002837C /* Models */,
-				18C08349229FA1D0005DC71A /* ViewControllers */,
 				18C08348229FA1CD005DC71A /* Views */,
+				18C08349229FA1D0005DC71A /* ViewControllers */,
 				18B5FBEF229D04CB00B6BDBB /* Resources */,
 				18B5FBC5229D04A200B6BDBB /* Main.storyboard */,
 				18B5FBC8229D04AE00B6BDBB /* Assets.xcassets */,
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				18B5FC1D229D0B3200B6BDBB /* MainCell.swift */,
+				458F064422E341C800271BB4 /* DetailsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,8 +375,10 @@
 				18B5FBC2229D04A200B6BDBB /* AppDelegate.swift in Sources */,
 				187CFB85229FCA0E0002837C /* Details.swift in Sources */,
 				18B5FC1F229D0B3200B6BDBB /* MainCell.swift in Sources */,
+				458F064522E341C800271BB4 /* DetailsCell.swift in Sources */,
 				18B5FC0D229D064500B6BDBB /* CCollection.swift in Sources */,
 				18C0834C229FA423005DC71A /* Main.swift in Sources */,
+				458F064722E4636400271BB4 /* Interface.swift in Sources */,
 				18B5FC19229D06E400B6BDBB /* Router.swift in Sources */,
 				18B5FC1B229D070800B6BDBB /* Vue.swift in Sources */,
 				18B5FC09229D063D00B6BDBB /* CTable.swift in Sources */,

@@ -8,28 +8,37 @@
 
 import UIKit
 
-class Main:MainProtocol{
-    
-    var arrayVue: Vue = Vue()
-    var indexVue: Vue = Vue()
-    
-    func startListen() {
+class Main:Vue{
         
+    override func v_start() {
         
-        loadData()
-        
-        indexVue.v_index { (index) in
-         
+        var array = Array<VueData>()
+        for i in 1...12{
             
-            let m = self.arrayVue.v_array?[index] as! MainModel
-            print(m.data?.name)
+            let m = MainModel()
+            m.name = "数据"
+            array.append(m)
+            
+        }
+        self.v_array(vId: arrayID) { () -> Array<VueData>? in
+            
+            return array
+        }
+        self.v_index(vId: indexID) { (index) in
+            
+            let m = array[index] as! MainModel
+            print(m.name)
             print(m.v_identifier)
             if m.v_identifier == 0{
-                
+
                 Router.push(Details().getViewController(), ["id":"10"], nil)
-                
+
             }
+
+        }
+        self.v_text(vId: labelID) { () -> String? in
             
+            return "abcdefg"
         }
         
     }
@@ -37,72 +46,20 @@ class Main:MainProtocol{
     func getViewController() -> UIViewController {
         
         let vc = MainVC()
-        vc.m = self
+        vc.vue = self
         vc.navigationItem.title = "列表"
         return vc
         
     }
     
-    func loadData(){
-        
-        var array = Array<VueData>()
-        for i in 1...12{
-            
-            let m = MainModel()
-            let d = MainData()
-            d.name = "数据"
-            m.data = d
-            array.append(m)
-            
-        }
-        
-        
-        arrayVue.v_array(true, v: { () -> Array<VueData>? in
-            
-            return array
-        })
-        
-        
-        
-    }
-    
-    
 }
-class MainModel: VueData,MainCellProtocol{
+class MainModel: VueData{
     
-    
-    var v_palm: String = "MainCell"
-    var v_identifier:Int = 0
-    var v_selectVue:Vue = Vue()
-    
-    
-    var textVue:Vue = Vue()
-    var clickVue:Vue = Vue()
-    var tapVue:Vue = Vue()
-    var data:MainData?
-    
-    func startListen() {
-        
-        textVue.v_text { () -> String? in
-            
-            return data?.name
-        }
-        clickVue.v_on {
-            
-            self.v_identifier = 1
-            print("click")
-        }
-        tapVue.v_on {
-            self.v_identifier = 0
-            self.v_selectVue.v_on?()
-        }
-        
-    }
-    
-}
-class MainData{
-    
+
     var name:String?
-    
+    override func v_height() -> CGFloat {
+        return 100
+    }
     
 }
+

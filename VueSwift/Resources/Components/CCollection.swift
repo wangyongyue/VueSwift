@@ -19,8 +19,16 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
         self.delegate = self
         self.dataSource = self
         
-        register(CCollection.templates)
-
+       
+        for (key,value) in Vue.vueComponents{
+            let aClass = NSClassFromString(value)
+            let superClass = class_getSuperclass(aClass)
+            if let sClass = superClass{
+                if NSStringFromClass(sClass) == NSStringFromClass(UICollectionViewCell.classForCoder()){
+                    self.register(aClass, forCellWithReuseIdentifier: value)
+                }
+            }            
+        }
         
     }
    
@@ -39,42 +47,32 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let model = array?[indexPath.row]
-        if let m = model,let palm = model?.v_palm{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: palm, for: indexPath)
-            if cell is CellProtocol{
-                let aCell = cell as! CellProtocol
-                aCell.setModel(m)
-            }
-            m.v_selectVue.v_on {
+        if let m = model{
+            let identifier = Vue.vueComponents[NSStringFromClass(m.classForCoder)]
+            if let ide =  identifier {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier!, for: indexPath)
+                cell.setV_Model(m)
+                m.v_to {
+                    self.block?(indexPath.row)
+                    self.vue?.v_index(vId: self.vId, index: indexPath.row)
+                }
                 
-                self.block?(indexPath.row)
-                self.vue?.v_index?(indexPath.row)
+                return cell
             }
             
-            return cell
         }
         return UICollectionViewCell()
         
     }
     
-    public func register(_ templates:Array<AnyClass>){
-
-        for value in templates{
-            let className:String=NSStringFromClass(value).components(separatedBy: ".").last!
-            self.register(value, forCellWithReuseIdentifier: className)
-        }
-    }
    
     
     //v-array
-    public func v_array(vue:Vue){
-        
-        vue.setupVue {
-            self.array = vue.v_array
+    public func v_array(vId:String?,vue:Vue?){
+        vue?.v_array(vId: vId) { (array) in
+            self.array = array
             self.reloadData()
-            
         }
-        
     }
     
     
@@ -90,20 +88,14 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
     
     //v-index
     public var vue:Vue?
-    public func v_index(vue:Vue){
-        
+    public var vId:String?
+    public func v_index(vId:String?,vue:Vue?){
+        self.vId = vId
         self.vue = vue
         
     }
-    
 
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//        block?(indexPath.row)
-//
-//        self.vue?.v_index?(indexPath.row)
-//    }
-    
-
+}
+extension UICollectionViewCell{
+   @objc func setV_Model(_ aModel:VueData){}
 }

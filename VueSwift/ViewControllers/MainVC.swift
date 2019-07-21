@@ -7,45 +7,47 @@
 //
 
 import UIKit
+import os_object
 
+
+let arrayID = "mainID"
+let indexID = "indexID"
+let labelID = "labelID"
 
 class MainVC: UIViewController {
 
+    var vue:Vue?
     
-    var m:MainProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         self.view.backgroundColor = UIColor.white
         
-        
+        Vue.register(aClass: DetailsModel.classForCoder(), toClass: DetailsCell.classForCoder())
+        Vue.register(aClass: MainModel.classForCoder(), toClass: MainCell.classForCoder())
+
         let table = CTable()
         self.view.addSubview(table)
-       
         table.frame = CGRect.init(x: 0, y: 0, width: Screen.width(), height: Screen.height())
-        table.register([MainCell.classForCoder()])
         
-        if let v = m?.arrayVue{
-            table.v_array(vue: v)
+        table.v_array(vId: arrayID, vue: vue)
+        table.v_index(vId: indexID, vue: vue)
+        
+        
+        let label = UILabel()
+        label.textColor = UIColor.red
+        label.frame = CGRect.init(x: 100, y: 200, width: 100, height: 50)
+        self.view.addSubview(label)
+        label.text = "sdfs"
+        
+        label.v_text(vId: labelID, vue: vue)
+        vue?.v_start()
 
-        }
         
-        if let v = m?.indexVue{
-            table.v_index(vue: v)
-        }
-        
-        m?.startListen()
     }
-
+   
 }
-protocol MainProtocol {
-    
-    var arrayVue:Vue{get}
-    var indexVue:Vue{get}
-    func startListen()
 
-}
 
 
 class Screen{
