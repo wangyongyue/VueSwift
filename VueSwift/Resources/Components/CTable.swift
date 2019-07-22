@@ -110,5 +110,5 @@ open class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
 }
 
 extension UITableViewCell{
-   @objc public func setV_Model(_ aModel:VueData){}
+   @objc open func setV_Model(_ aModel:VueData){}
 }
