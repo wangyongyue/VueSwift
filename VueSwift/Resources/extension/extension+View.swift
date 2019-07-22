@@ -17,7 +17,7 @@ open class VueData:NSObject {
     func v_to(_ block:@escaping VueBlock){
         self.v_block = block
     }
-    func v_to(){
+    public func v_to(){
         self.v_block?()
     }
 }
