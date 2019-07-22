@@ -8,7 +8,7 @@
 
 import UIKit
 public typealias VueBlock = () -> ()
-public class Vue :NSObject{
+open class Vue :NSObject{
     
     public static var vueComponents = [String:String]()
     public static func register(aClass:AnyClass,toClass:AnyClass){
@@ -132,6 +132,6 @@ public class Vue :NSObject{
     }
     
     //
-    public func v_start(){}
+    open func v_start(){}
     
 }
