@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class VueData:NSObject {
+open class VueData:NSObject {
     var v_identifier:Int = 0
-    func v_height() -> CGFloat{
+    open func v_height() -> CGFloat{
         return 50
     }
     var v_block:VueBlock?

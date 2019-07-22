@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDataSource{
+open class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectionViewDataSource{
 
     public static var templates = Array<AnyClass>()
     public var array:Array<VueData>?
@@ -32,7 +32,7 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
         
     }
    
-    required init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -98,5 +98,5 @@ public class CCollection: UICollectionView ,UICollectionViewDelegate,UICollectio
 
 }
 extension UICollectionViewCell{
-   @objc func setV_Model(_ aModel:VueData){}
+   @objc open func setV_Model(_ aModel:VueData){}
 }

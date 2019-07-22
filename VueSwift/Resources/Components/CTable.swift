@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
+open class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
 
     public var array:Array<VueData>?
     override init(frame: CGRect, style: UITableView.Style) {
@@ -34,7 +34,7 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
         }
 
     }
-    public override func numberOfRows(inSection section: Int) -> Int {
+    open override func numberOfRows(inSection section: Int) -> Int {
         return 1
     }
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -74,7 +74,7 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
     
    
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -110,5 +110,5 @@ public class CTable: UITableView ,UITableViewDataSource,UITableViewDelegate{
 }
 
 extension UITableViewCell{
-   @objc func setV_Model(_ aModel:VueData){}
+   @objc public func setV_Model(_ aModel:VueData){}
 }
