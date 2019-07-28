@@ -9,7 +9,7 @@
 import UIKit
 
 open class VueData:NSObject {
-    var v_identifier:Int = 0
+    public var v_identifier:Int = 0
     open func v_height() -> CGFloat{
         return 50
     }
