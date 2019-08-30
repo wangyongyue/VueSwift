@@ -89,16 +89,16 @@ open class Vue :NSObject{
     }
     
     //input
-    public typealias VueInputBlock = () -> ()
+    public typealias VueInputBlock = (String) -> ()
     public var blockInputDic = [String:VueInputBlock]()
     public func v_input(vId:String?,v:VueInputBlock?){
         if let a = vId,let b = v{
             blockInputDic[a] = b
         }
     }
-    public func v_input(vId:String?){
-        if let a = vId {
-            blockInputDic[a]?()
+    public func v_input(vId:String?,text:String?){
+        if let a = vId ,let s = text{
+            blockInputDic[a]?(s)
         }
     }
     

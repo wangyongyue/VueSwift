@@ -278,7 +278,7 @@ extension UITextField{
             
             return self.text
         })
-        self.vue?.v_input(vId: self.text)
+        self.vue?.v_input(vId: self.vId, text:self.text)
         
     }
     
@@ -354,7 +354,7 @@ extension UITextView:UITextViewDelegate{
             
             return textView.text
         })
-       self.vue?.v_input(vId: textView.text)
+        self.vue?.v_input(vId: self.vId, text:textView.text)
        block?()
         
     }

@@ -33,15 +33,32 @@ class MainVC: UIViewController {
         table.v_array(vId: arrayID, vue: vue)
         table.v_index(vId: indexID, vue: vue)
         
+//        
+//        let label = UILabel()
+//        label.textColor = UIColor.red
+//        label.frame = CGRect.init(x: 100, y: 200, width: 100, height: 50)
+//        self.view.addSubview(label)
+//        label.text = "sdfs"
+//        
+//        label.v_text(vId: labelID, vue: vue)
         
-        let label = UILabel()
-        label.textColor = UIColor.red
-        label.frame = CGRect.init(x: 100, y: 200, width: 100, height: 50)
-        self.view.addSubview(label)
-        label.text = "sdfs"
         
-        label.v_text(vId: labelID, vue: vue)
+        
         vue?.v_start()
+        
+//
+//        let field = UITextField()
+//        field.textColor = UIColor.red
+//        field.frame = CGRect.init(x: 100, y:300, width: 100, height: 50)
+//        self.view.addSubview(field)
+//        field.borderStyle = .roundedRect
+//
+//        let av = Vue()
+//        field.v_input(vId: "ancsd", vue: av)
+//        av.v_input(vId: "ancsd") { (text) in
+//
+//            print(text)
+//        }
 
     }
    
